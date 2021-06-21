@@ -23,7 +23,6 @@ class AuthController extends Controller
     {
         $user = null;
         try {
-            /** @var \SocialiteProviders\Manager\OAuth2\User */
             $user = Socialite::driver('google')->user();
         } catch (\Exception $e) {
             return redirect('/login');
